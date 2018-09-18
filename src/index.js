@@ -1,2 +1,2 @@
 import './css/style.sass';
-import FormContainer from './js/components/container/FormContainer';
+import Application from './js/components/container/Application';
