@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import styles from '../../../css/application.sass';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import SignIn from './SignIn';
 
 class Home extends Component {
@@ -34,13 +31,18 @@ class Application extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/sign-in">Sign In</Link></li>
-          </ul>
-          <Route exact path="/" component={ Home }/>
-          <Route path="/sign-in" component={ SignIn }/>
+        <div className={ styles.gridContainer }>
+          <div className={ styles.gridItem, styles.sidebar }>
+            <h1>App</h1>
+            <ul>
+              <Link to="/"><li>Home</li></Link>
+              <Link to="/sign-in"><li>Sign In</li></Link>
+            </ul>
+          </div>
+          <div className={ styles.gridItem, styles.main }>
+            <Route exact path="/" component={ Home }/>
+            <Route path="/sign-in" component={ SignIn }/>
+          </div>
         </div>
       </Router>
     );

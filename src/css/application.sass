@@ -1,0 +1,31 @@
+.grid-container
+  display: grid
+  height: inherit
+  grid-template-columns: 200px auto
+  grid-template-areas: 'sidebar main'
+  grid-gap: 50px
+
+.sidebar
+  grid-area: sidebar
+  height: inherit
+  background-color: rgb(238, 238, 238)
+  h1
+    padding: 10px 20px
+    border-top: 1px solid gray
+    border-bottom: 1px solid gray
+    background-color: white;
+  ul
+    list-style-type: none
+    width: 100%
+    padding: 0
+  li
+    padding: 10px 20px
+    border-top: 1px solid rgb(238, 238, 238)
+    border-bottom: 1px solid rgb(238, 238, 238)
+    &:hover
+      background-color: white
+      border-top: 1px solid gray
+      border-bottom: 1px solid gray
+
+.main
+  grid-area: main
