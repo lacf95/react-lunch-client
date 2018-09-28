@@ -3,6 +3,7 @@ import styles from '../../../css/application.sass';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import SignIn from './SignIn';
+import Menu from './Menu';
 
 class Home extends Component {
   componentDidMount() {
@@ -37,11 +38,13 @@ class Application extends Component {
             <ul>
               <Link to="/"><li>Home</li></Link>
               <Link to="/sign-in"><li>Sign In</li></Link>
+              <Link to="/menu-calendar"><li>Menu calendar</li></Link>
             </ul>
           </div>
           <div className={ styles.gridItem, styles.main }>
             <Route exact path="/" component={ Home }/>
             <Route path="/sign-in" component={ SignIn }/>
+            <Route path="/menu-calendar" component={ Menu }/>
           </div>
         </div>
       </Router>

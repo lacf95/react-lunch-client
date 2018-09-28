@@ -44,31 +44,34 @@ class SignIn extends Component {
     }
 
     return (
-      <form id="user-form" onSubmit={ this.handleSubmit }>
-        <fieldset>
-          <legend>Sign in</legend>
-          <Input
-            text="Email:"
-            label="email"
-            type="email"
-            id="email"
-            value={ email }
-            handleChange={ this.handleChange }
-          />
-          <Input
-            text="Password:"
-            label="password"
-            type="password"
-            id="password"
-            value={ password }
-            handleChange={ this.handleChange }
-          />
-          <input
-            type="submit"
-            value="Sign in"
-          />
-      </fieldset>
-      </form>
+      <div>
+        <h1>Sign in</h1>
+        <form id="user-form" onSubmit={ this.handleSubmit }>
+          <fieldset>
+            <legend>Sign in</legend>
+            <Input
+              text="Email:"
+              label="email"
+              type="email"
+              id="email"
+              value={ email }
+              handleChange={ this.handleChange }
+            />
+            <Input
+              text="Password:"
+              label="password"
+              type="password"
+              id="password"
+              value={ password }
+              handleChange={ this.handleChange }
+            />
+            <input
+              type="submit"
+              value="Sign in"
+            />
+        </fieldset>
+        </form>
+      </div>
     );
   }
 }
